@@ -25,7 +25,11 @@ public class Product {
         return price;
     }
 
-    public String getAuthor() {
-        return getAuthor();
+    public boolean matches(String search) {
+        if (name.contains(search)) {
+            return true;
+        } else {
+            return false;
+        }
     }
 }

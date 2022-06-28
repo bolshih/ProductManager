@@ -23,7 +23,7 @@ public class ProductManager {
     public Product[] searchBy(String text) {
         Product[] result = new Product[0];
         for (Product product : repo.getProducts()) {
-            if (matches(product, text)) {
+            if (product.matches(text)) {
                 int i = 0;
                 Product[] tmp = new Product[result.length + 1];
                 tmp[i] = product;
@@ -31,13 +31,5 @@ public class ProductManager {
             }
         }
         return result;
-    }
-
-    public boolean matches(Product product, String search) {
-        if (product.getName().contains(search)) {
-            return true;
-        } else {
-            return false;
-        }
     }
 }

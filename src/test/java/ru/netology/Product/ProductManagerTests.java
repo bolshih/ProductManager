@@ -1,8 +1,8 @@
 package ru.netology.Product;
 
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
 
 public class ProductManagerTests {
     ProductRepository repo = new ProductRepository();
@@ -35,7 +35,25 @@ public class ProductManagerTests {
 
     @Test
 
-    public void shouldSearchByTrue() {
+    public void shouldSearchByNameTrue1() {
+
+        manager.addProduct(product1);
+        manager.addProduct(product2);
+        manager.addProduct(product3);
+        manager.addProduct(product4);
+        manager.addProduct(product5);
+        manager.addProduct(product6);
+
+        Product[] expected = {product2};
+        Product[] actual = manager.searchBy("Smartphone1");
+
+        Assertions.assertArrayEquals(expected, actual);
+
+    }
+
+    @Test
+
+    public void shouldSearchByNameTrue2() {
 
         manager.addProduct(product1);
         manager.addProduct(product2);
@@ -67,6 +85,36 @@ public class ProductManagerTests {
 
         Assertions.assertArrayEquals(expected, actual);
 
+    }
+
+    @Test
+
+    public void shouldSearchByAothor() {
+
+        manager.addProduct(product1);
+        manager.addProduct(product2);
+        manager.addProduct(product3);
+        manager.addProduct(product4);
+        manager.addProduct(product5);
+        manager.addProduct(product6);
+
+        Product[] expected = {product1, product6};
+        Product[] actual = manager.searchBy("Автор1");
+    }
+
+    @Test
+
+    public void shouldSearchByManufacturer() {
+
+        manager.addProduct(product1);
+        manager.addProduct(product2);
+        manager.addProduct(product3);
+        manager.addProduct(product4);
+        manager.addProduct(product5);
+        manager.addProduct(product6);
+
+        Product[] expected = {product2, product5};
+        Product[] actual = manager.searchBy("Manufacturer1");
     }
 
     @Test
