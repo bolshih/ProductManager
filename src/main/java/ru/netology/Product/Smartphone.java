@@ -13,4 +13,12 @@ public class Smartphone extends Product {
         return manufacturer;
     }
 
+    @Override
+    public boolean matches(String search) {
+        if (super.matches(search)) { // вызов метода matches в версии описанной в Product
+            return true;
+        } else {
+            return manufacturer.contains(search);
+        }
+    }
 }
