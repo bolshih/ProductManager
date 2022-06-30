@@ -19,11 +19,11 @@ public class ProductRepository {
         return products;
     }
 
-    public Product[] removeById(int Id) {
+    public Product[] removeById(int id) {
         Product[] tmp = new Product[products.length - 1];
         int copyToIndex = 0;
         for (Product product : products) {
-            if (product.getId() != Id) {
+            if (product.getId() != id) {
                 tmp[copyToIndex] = product;
                 copyToIndex++;
             }
