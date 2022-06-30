@@ -11,8 +11,8 @@ public class ProductManagerTests {
     Product product1 = new Book(1, "Книга1", 4234, "Автор1");
     Product product2 = new Smartphone(2, "Smartphone1", 33_000, "Manufacturer1");
     Product product3 = new Smartphone(3, "Smartphone2", 10_000, "Manufacturer2");
-    Product product4 = new Book(4, "Книга2", 434, "Автор2");
-    Product product5 = new Smartphone(5, "Smartphone3", 50_000, "Manufacturer1");
+    Product product4 = new Book(2, "Книга2", 434, "Автор2");
+    Product product5 = new Smartphone(4, "Smartphone3", 50_000, "Manufacturer1");
     Product product6 = new Book(6, "Книга3", 4234, "Автор1");
 
 
