@@ -15,7 +15,7 @@ public class ProductManager {
         return repo.getProducts();
     }
 
-    public Product[] removeById(int id){
+    public Product[] removeById(int id) {
         return repo.removeById(id);
     }
 
