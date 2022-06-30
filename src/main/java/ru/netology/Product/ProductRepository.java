@@ -15,6 +15,7 @@ public class ProductRepository {
     }
 
     public Product[] getProducts() {
+
         return products;
     }
 
