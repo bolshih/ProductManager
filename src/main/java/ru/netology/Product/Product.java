@@ -12,8 +12,12 @@ public class Product {
         this.price = price;
     }
 
+    public Product(){
+
+    }
 
     public int getId() {
+
         return id;
     }
 
@@ -22,10 +26,8 @@ public class Product {
     }
 
     public int getPrice() {
+
         return price;
     }
 
-    public String getAuthor() {
-        return getAuthor();
-    }
 }

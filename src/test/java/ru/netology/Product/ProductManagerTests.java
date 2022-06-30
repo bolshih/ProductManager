@@ -82,6 +82,8 @@ public class ProductManagerTests {
 
         Product[] expected = {product1, product2, product4, product5, product6};
         Product[] actual = manager.removeById(3);
+
+        Assertions.assertArrayEquals(expected, actual);
     }
 
 }

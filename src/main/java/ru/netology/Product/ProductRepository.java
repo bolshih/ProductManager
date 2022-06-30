@@ -4,6 +4,7 @@ public class ProductRepository {
 
     private Product[] products = new Product[0];
 
+
     public void addProduct(Product product) {
         Product[] tmp = new Product[products.length + 1];
         for (int i = 0; i < products.length; i++) {
